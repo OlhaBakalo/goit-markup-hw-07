@@ -149,10 +149,7 @@ body {
   transition: color var(--transition-duration) var(--timing-function);
 }
 
-.nav__link:hover,
-.nav__link:focus,
-.contacts__link:hover,
-.contacts__link:focus {
+.nav__link:hover, .nav__link:focus {
   color: var(--accent-text-color);
 }
 
@@ -180,6 +177,10 @@ body {
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
   transition: color var(--transition-duration) var(--timing-function);
+}
+
+.contacts__link:hover, .contacts__link:focus {
+  color: var(--accent-text-color);
 }
 
 .header__list:not(:last-child) {
@@ -238,8 +239,7 @@ body {
   transition: background-color var(--transition-duration) var(--timing-function);
 }
 
-.hero__btn:hover,
-.hero__btn:focus {
+.hero__btn:hover, .hero__btn:focus {
   background-color: var(--accent-highlights-color);
 }
 
@@ -398,8 +398,7 @@ body {
   transition: background-color var(--transition-duration) var(--timing-function), color var(--transition-duration) var(--timing-function);
 }
 
-.team__link:hover,
-.team__link:focus {
+.team__link:hover, .team__link:focus {
   background-color: var(--accent-color);
   color: var(--basic-background-color);
 }
@@ -438,8 +437,7 @@ body {
   transition: color var(--transition-duration) var(--timing-function);
 }
 
-.clients__link:hover,
-.clients__link:focus {
+.clients__link:hover, .clients__link:focus {
   color: var(--accent-color);
 }
 
@@ -476,6 +474,10 @@ body {
   transition: color var(--transition-duration) var(--timing-function);
 }
 
+.address__map:hover, .address__map:focus {
+  color: var(--accent-text-color);
+}
+
 .address__contact {
   font-style: normal;
   font-size: 14px;
@@ -485,10 +487,7 @@ body {
   transition: color var(--transition-duration) var(--timing-function);
 }
 
-.address__map:hover,
-.address__map:focus,
-.address__contact:hover,
-.address__contact:focus {
+.address__contact:hover, .address__contact:focus {
   color: var(--accent-text-color);
 }
 
@@ -527,8 +526,7 @@ body {
   transition: background-color var(--transition-duration) var(--timing-function), color var(--transition-duration) var(--timing-function);
 }
 
-.footer__link:hover,
-.footer__link:focus {
+.footer__link:hover, .footer__link:focus {
   background-color: var(--accent-color);
   color: var(--basic-background-color);
 }
@@ -585,14 +583,13 @@ body {
   transition: background-color var(--transition-duration) var(--timing-function);
 }
 
+.footer__btn:hover, .footer__btn:focus {
+  background-color: var(--accent-highlights-color);
+}
+
 .footer__btn-icon {
   margin-left: 10px;
   fill: currentColor;
-}
-
-.footer__btn:hover,
-.footer__btn:focus {
-  background-color: var(--accent-highlights-color);
 }
 
 .btn {
@@ -620,9 +617,7 @@ body {
   transition: background-color var(--transition-duration) var(--timing-function), color var(--transition-duration) var(--timing-function), box-shadow var(--transition-duration) var(--timing-function);
 }
 
-.btn__text--active,
-.btn__text:hover,
-.btn__text:focus {
+.btn__text--active, .btn__text:hover, .btn__text:focus {
   color: var(--second-text-color);
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -666,12 +661,6 @@ body {
   transition: transform var(--transition-duration) var(--timing-function);
 }
 
-.gallery__card:hover .gallery__thumb::before,
-.gallery__card:hover .gallery__overley {
-  transform: translateY(0);
-  opacity: 1;
-}
-
 .gallery__overley-text {
   font-size: 18px;
   line-height: 1.56;
@@ -686,9 +675,14 @@ body {
   transition: box-shadow var(--transition-duration) var(--timing-function);
 }
 
-.gallery__card:hover,
-.gallery__card:focus {
+.gallery__card:hover, .gallery__card:focus {
   box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+}
+
+.gallery__card:hover .gallery__thumb::before,
+.gallery__card:hover .gallery__overley {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .gallery__card-info {
@@ -789,6 +783,14 @@ body {
   margin-bottom: 10px;
 }
 
+.form__field:focus-within > .form__input {
+  border-color: var(--accent-color);
+}
+
+.form__field:focus-within > .form__icon {
+  color: var(--accent-color);
+}
+
 .form__label,
 .form__textarea-label {
   margin-bottom: 4px;
@@ -809,10 +811,6 @@ body {
   transition: border-color var(--transition-duration) var(--timing-function);
 }
 
-.form__field:focus-within > .form__input {
-  border-color: var(--accent-color);
-}
-
 .form__icon {
   position: absolute;
   top: 50%;
@@ -821,10 +819,6 @@ body {
   fill: currentColor;
   outline: none;
   transition: color var(--transition-duration) var(--timing-function);
-}
-
-.form__field:focus-within > .form__icon {
-  color: var(--accent-color);
 }
 
 .form__comment {
@@ -917,8 +911,7 @@ body {
   transition: background-color var(--transition-duration) var(--timing-function);
 }
 
-.modal__btn:hover,
-.modal__btn:focus {
+.modal__btn:hover, .modal__btn:focus {
   background-color: var(--accent-highlights-color);
 }
 /*# sourceMappingURL=main.css.map */

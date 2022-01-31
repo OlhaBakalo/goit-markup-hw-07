@@ -46,9 +46,14 @@
   border-radius: 4px;
 
   transition: background-color var(--transition-duration) var(--timing-function);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-highlights-color);
+  }
 }
 
-.hero__btn:hover,
-.hero__btn:focus {
-  background-color: var(--accent-highlights-color);
-}
+// .hero__btn:hover,
+// .hero__btn:focus {
+//   background-color: var(--accent-highlights-color);
+// }

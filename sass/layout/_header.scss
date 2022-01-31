@@ -33,14 +33,19 @@
   color: var(--header-text-color);
 
   transition: color var(--transition-duration) var(--timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-text-color);
+  }
 }
 
-.nav__link:hover,
-.nav__link:focus,
-.contacts__link:hover,
-.contacts__link:focus {
-  color: var(--accent-text-color);
-}
+// .nav__link:hover,
+// .nav__link:focus,
+// .contacts__link:hover,
+// .contacts__link:focus {
+//   color: var(--accent-text-color);
+// }
 
 .header__item:not(:last-child) {
   margin-right: 50px;
@@ -68,6 +73,11 @@
   color: var(--primary-text-color);
 
   transition: color var(--transition-duration) var(--timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-text-color);
+  }
 }
 
 .header__list:not(:last-child) {

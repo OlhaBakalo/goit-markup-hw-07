@@ -77,13 +77,19 @@
 
   transition: background-color var(--transition-duration) var(--timing-function),
     color var(--transition-duration) var(--timing-function);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    color: var(--basic-background-color);
+  }
 }
 
-.team__link:hover,
-.team__link:focus {
-  background-color: var(--accent-color);
-  color: var(--basic-background-color);
-}
+// .team__link:hover,
+// .team__link:focus {
+//   background-color: var(--accent-color);
+//   color: var(--basic-background-color);
+// }
 
 .team__label {
   fill: currentColor;

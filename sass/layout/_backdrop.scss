@@ -9,18 +9,28 @@
   opacity: 1;
   transition: opacity var(--transition-duration) var(--timing-function),
     visibility var(--transition-duration) var(--timing-function);
+
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    & .modal {
+      transform: translate(-50%, -50%) scale(0.9);
+      opacity: 0;
+    }
+  }
 }
 
-.backdrop.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
+// .backdrop.is-hidden {
+//   opacity: 0;
+//   visibility: hidden;
+//   pointer-events: none;
+// }
 
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0.9);
-  opacity: 0;
-}
+// .backdrop.is-hidden .modal {
+//   transform: translate(-50%, -50%) scale(0.9);
+//   opacity: 0;
+// }
 
 .modal {
   position: absolute;
@@ -58,13 +68,19 @@
 
   transition: color var(--transition-duration) var(--timing-function),
     box-shadow var(--transition-duration) var(--timing-function);
+
+  &:hover {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    color: var(--accent-color);
+  }
 }
 
-.modal__close:hover {
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  color: var(--accent-color);
-}
+// .modal__close:hover {
+//   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+//     0px 2px 1px rgba(0, 0, 0, 0.2);
+//   color: var(--accent-color);
+// }
 
 .modal__icon-close {
   fill: currentColor;
@@ -86,6 +102,13 @@
   position: relative;
   display: block;
   margin-bottom: 10px;
+
+  &:focus-within > .form__input {
+    border-color: var(--accent-color);
+  }
+  &:focus-within > .form__icon {
+    color: var(--accent-color);
+  }
 }
 
 .form__label,
@@ -112,9 +135,9 @@
   transition: border-color var(--transition-duration) var(--timing-function);
 }
 
-.form__field:focus-within > .form__input {
-  border-color: var(--accent-color);
-}
+// .form__field:focus-within > .form__input {
+//   border-color: var(--accent-color);
+// }
 
 .form__icon {
   position: absolute;
@@ -128,9 +151,9 @@
   transition: color var(--transition-duration) var(--timing-function);
 }
 
-.form__field:focus-within > .form__icon {
-  color: var(--accent-color);
-}
+// .form__field:focus-within > .form__icon {
+//   color: var(--accent-color);
+// }
 
 .form__comment {
   display: block;
@@ -149,19 +172,30 @@
   border-radius: 4px;
 
   transition: border-color var(--transition-duration) var(--timing-function);
+
+  &:placeholder-shown {
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+
+    color: rgba(117, 117, 117, 0.5);
+  }
+  &:focus {
+    border-color: var(--accent-color);
+  }
 }
 
-.form__textarea:placeholder-shown {
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.01em;
+// .form__textarea:placeholder-shown {
+//   font-size: 14px;
+//   line-height: 1.14;
+//   letter-spacing: 0.01em;
 
-  color: rgba(117, 117, 117, 0.5);
-}
+//   color: rgba(117, 117, 117, 0.5);
+// }
 
-.form__textarea:focus {
-  border-color: var(--accent-color);
-}
+// .form__textarea:focus {
+//   border-color: var(--accent-color);
+// }
 
 .checkbox {
   margin-bottom: 30px;
@@ -203,13 +237,23 @@
   fill: transparent;
 }
 
-.checkbox__text:checked + .checkbox__label .checkbox__svg {
-  border: none;
-  background-color: var(--accent-color);
-}
+// .checkbox__text:checked + .checkbox__label .checkbox__svg {
+//   border: none;
+//   background-color: var(--accent-color);
+// }
 
-.checkbox__text:checked + .checkbox__label .checkbox__icon {
-  fill: var(--second-text-color);
+// .checkbox__text:checked + .checkbox__label .checkbox__icon {
+//   fill: var(--second-text-color);
+// }
+
+.checkbox__text:checked + .checkbox__label {
+  & .checkbox__svg {
+    border: none;
+    background-color: var(--accent-color);
+  }
+  & .checkbox__icon {
+    fill: var(--second-text-color);
+  }
 }
 
 .modal__btn {
@@ -230,9 +274,14 @@
   border-radius: 4px;
 
   transition: background-color var(--transition-duration) var(--timing-function);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-highlights-color);
+  }
 }
 
-.modal__btn:hover,
-.modal__btn:focus {
-  background-color: var(--accent-highlights-color);
-}
+// .modal__btn:hover,
+// .modal__btn:focus {
+//   background-color: var(--accent-highlights-color);
+// }
