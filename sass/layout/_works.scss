@@ -2,7 +2,7 @@
   padding-top: 0;
 }
 
-.works-header {
+.works__title {
   margin-bottom: 50px;
 
   font-size: 36px;
@@ -12,14 +12,14 @@
   color: var(--header-text-color);
 }
 
-.works-list {
+.works__list {
   display: flex;
   flex-wrap: wrap;
   margin-left: -30px;
   margin-top: -30px;
 }
 
-.works-item {
+.works__item {
   position: relative;
 
   flex-basis: calc(100% / 3 - 30px);
@@ -27,7 +27,7 @@
   margin-top: 30px;
 }
 
-.works-overlay {
+.works__overlay {
   position: absolute;
   bottom: 0;
 

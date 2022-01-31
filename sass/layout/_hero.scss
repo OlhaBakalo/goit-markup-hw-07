@@ -6,7 +6,7 @@
   background-color: var(--hero-footer-background-color);
 }
 
-.container-bg-hero {
+.hero__container {
   max-width: 1600px;
   margin: 0 auto;
   padding-top: 200px;
@@ -19,7 +19,7 @@
   background-position: center;
 }
 
-.hero-header {
+.hero__title {
   margin-bottom: 30px;
 
   font-weight: 900;
@@ -31,7 +31,7 @@
   color: var(--second-text-color);
 }
 
-.hero-btn {
+.hero__btn {
   padding: 10px 32px;
 
   font-family: inherit;
@@ -48,7 +48,7 @@
   transition: background-color var(--transition-duration) var(--timing-function);
 }
 
-.hero-btn:hover,
-.hero-btn:focus {
+.hero__btn:hover,
+.hero__btn:focus {
   background-color: var(--accent-highlights-color);
 }

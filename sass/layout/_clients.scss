@@ -1,4 +1,4 @@
-.clients-header {
+.clients__title {
   margin-bottom: 50px;
 
   font-size: 36px;
@@ -8,16 +8,16 @@
   color: var(--header-text-color);
 }
 
-.clients-list {
+.clients__list {
   display: flex;
   justify-content: center;
 }
 
-.clients-item:not(:last-child) {
+.clients__item:not(:last-child) {
   margin-right: 30px;
 }
 
-.clients-link {
+.clients__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,11 +31,11 @@
   transition: color var(--transition-duration) var(--timing-function);
 }
 
-.clients-link:hover,
-.clients-link:focus {
+.clients__link:hover,
+.clients__link:focus {
   color: var(--accent-color);
 }
 
-.clients-logo {
+.clients__logo {
   fill: currentColor;
 }

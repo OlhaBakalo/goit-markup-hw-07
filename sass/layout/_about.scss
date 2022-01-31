@@ -1,17 +1,17 @@
-.priority-list {
+.about__list {
   display: flex;
   flex-wrap: wrap;
   margin-left: -30px;
   margin-top: -30px;
 }
 
-.priority-item {
+.about__item {
   flex-basis: calc(100% / 4 - 30px);
   margin-left: 30px;
   margin-top: 30px;
 }
 
-.priority-thumb {
+.about__thumb {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,7 +22,7 @@
   background-color: var(--second-background-color);
 }
 
-.priority-header {
+.about__title {
   margin-bottom: 10px;
 
   font-size: 14px;
@@ -32,7 +32,7 @@
   color: var(--header-text-color);
 }
 
-.priority-text {
+.about__text {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
